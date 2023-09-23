@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
          { useNewUrlParser: true,
             useUnifiedTopology: true
          });
-         const db = mongoose.connection;
+  const db = mongoose.connection;
    db.once('open', () => {
         console.log('Database connected...');
       });
