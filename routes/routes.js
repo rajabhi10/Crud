@@ -28,11 +28,7 @@ router.post("/add", async (req, res) => {
 router.get("/", async (req, res) => {
     try {
       const users = await User.find().exec();
-        res.render('index', {
-        title: "Home Page",
-        users: users,
-        message: req.session.message
-      });
+        res.render('index', { title: "Home Page", users: users, message: req.session.message });
     } catch (err) {
       res.json({ message: err.message });
     }
